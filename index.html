@@ -7,6 +7,29 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <input value="Нажми меня" onclick="alert('You are Gay')" type="button">
+    <input value="Нажми меня" onclick="showModal('firstModal')" type="button">
+    
+    <!-- Модальное окно для первого выбора -->
+    <div id="firstModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('firstModal')">&times;</span>
+            <p>Выберите одно:</p>
+            <button onclick="selectFirstOption('пельмени')">Пельмени</button>
+            <button onclick="selectFirstOption('салат')">Салат</button>
+        </div>
+    </div>
+
+    <!-- Модальное окно для второго выбора -->
+    <div id="secondModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('secondModal')">&times;</span>
+            <p>Выберите одно:</p>
+            <button onclick="selectSecondOption('танчики')">Танчики</button>
+            <button onclick="selectSecondOption('качалка')">Качалка</button>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
 </body>
 </html>
+
